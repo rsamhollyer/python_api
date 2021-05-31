@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, '.')
-from database import db
+from data.database import db
 
 
 class BuildingModel(db.Model):
