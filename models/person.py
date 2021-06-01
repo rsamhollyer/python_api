@@ -1,7 +1,5 @@
-import sys
-sys.path.insert(0, '.')
-from data.database import db
+from data.database import *
 
 
-class PersonModel(db.Model):
-    pass
+# class PersonModel(db.Model):
+#     pass

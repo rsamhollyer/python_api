@@ -1,7 +1,9 @@
-import sys
-sys.path.insert(0, '.')
+# import sys
+# sys.path.insert(0, '.')
 from data.database import *
 from flask import jsonify
+
+print(db, ma)
 
 
 class BuildingModel(db.Model):
@@ -18,7 +20,7 @@ class BuildingModel(db.Model):
     longitude = db.Column(db.Float(20), nullable=False)
     isHq = db.Column(db.Boolean, nullable=False)
 
-    people = db.relationship("PersonModel", lazy='dynamic')
+    # people = db.relationship("PersonModel", lazy='select', backref='id')
 
     def __init__(
             self,
@@ -42,6 +44,6 @@ class BuildingModel(db.Model):
     # def
 
 
-class BuildingSchema(ma.ModelSchema):
+class BuildingSchema(ma.Schema):
     class Meta:
         model = BuildingModel
