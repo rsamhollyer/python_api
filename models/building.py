@@ -1,9 +1,5 @@
-# import sys
-# sys.path.insert(0, '.')
 from data.database import *
 from flask import jsonify
-
-print(db, ma)
 
 
 class BuildingModel(db.Model):
@@ -41,6 +37,7 @@ class BuildingModel(db.Model):
         self.latitude = latitude
         self.longitude = longitude
         self.isHq = isHq
+
     # def
 
 
