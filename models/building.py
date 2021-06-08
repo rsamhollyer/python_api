@@ -5,7 +5,7 @@ from flask import jsonify
 class BuildingModel(db.Model):
     __tablename__ = "buildings"
 
-    id = db.Column(db.Integer, primary_key=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
     street = db.Column(db.String(50), nullable=False)
     building_number = db.Column(db.String(12), nullable=False)
     city = db.Column(db.String(50), nullable=False)
